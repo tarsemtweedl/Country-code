@@ -1,0 +1,40 @@
+{
+  "name": "countryInfoApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "lint": "eslint .",
+    "rr": "npm run adb && adb shell input keyevent 82 20 66 66",
+    "adb": "adb reverse tcp:8081 tcp:8081 && adb reverse tcp:8097 tcp:8097 && adb reverse tcp:9090 tcp:9090",
+    "shake": "adb shell input keyevent 82"
+  },
+  "dependencies": {
+    "apollo-boost": "^0.1.27",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "native-base": "^2.11.0",
+    "react": "16.6.3",
+    "react-apollo": "^2.4.1",
+    "react-native": "0.58.4",
+    "react-native-gesture-handler": "^1.1.0",
+    "react-navigation": "^3.5.1"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "24.1.0",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "24.1.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
